@@ -4,11 +4,11 @@ import java.util.List;
 class MyArrayList<E> extends ArrayList<E> {
 	@Override
 	public boolean add(E e) {
-		if (e instanceof Integer || e instanceof Float || e instanceof Double) {
+		if (e instanceof Integer || e instanceof Float || e instanceof Double || e instanceof Short || e instanceof Byte || e instanceof Long) {
 			super.add(e);
 			return true;
 		} else {
-			throw new ClassCastException("Only Integer, Float, and Double are supported.");
+			throw new ClassCastException("Only number format is supported.");
 		}
 	}
 }
